@@ -63,6 +63,8 @@ body {
 .mh-logo{
     width: 40%;
     height: auto;
+    box-shadow: rgba(32, 32, 32, 0.877) 1px 1px 8px 8px;
+    border-radius: 50%;
 }
 
 .menu-header{
@@ -109,13 +111,24 @@ body {
     justify-content: center;
     align-items: center;
     padding-top: 20vh;
-    font-weight: bold;
     font-style: italic;
-    font-size: xx-large;
+    font-size: large;
     font-family: 'Courier New', Courier, monospace;
     margin-bottom: 3em;
 }
 
 .same{
     display: none;
+}
+
+.icons{
+    float: left;
+    border-style: solid;
+    border-radius: 40%;
+}
+
+.contact-info{
+    float: left;
+    margin-left: 1em;
+    padding-top: 0.3em;
 }
