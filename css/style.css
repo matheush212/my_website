@@ -14,8 +14,9 @@ body {
 .header-box{
     width: 75%;
     height: 15em;
-    background-color: black;
+    background-image: url('../images/alto_relevo.jpg');
     float: left;
+    box-shadow: grey 5px 5px 5px 5px;
     
 }
 
@@ -52,7 +53,7 @@ body {
 .logo-box{
     width: 25%;
     height: 15em;
-    background-color: black;
+    background-color: rgba(32, 32, 32, 0.877);
     float: right; 
     display: flex;
     justify-content: center;
@@ -84,6 +85,19 @@ body {
     font-weight: bold;
     font-style: italic;
     cursor: pointer;
+}
+
+.link{
+    text-decoration: none;
+    font-family: ubuntu, Arial, Helvetica, sans-serif;
+    color: rgb(8, 8, 63);
+    border-bottom: 4px;
+    transition: .1s;
+
+}
+.link:hover{
+    border-bottom: 4px solid rgb(30, 30, 119);
+    color: rgb(30, 30, 119);
 }
 
 .home-content{
