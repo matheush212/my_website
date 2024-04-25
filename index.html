@@ -8,10 +8,11 @@
     <meta name="description" content="" />
     <title>MHSoftwares</title>
     <link rel="shortcut icon" href="/favicon.ico">
+    <script type="text/javascript" src="js/script.js"></script>
     <link href='css/style.css' rel='stylesheet' type='text/css'>
 </head>
 
-<body>
+<body onload="tabControl('flex', 'none', 'none', 'none');">
     <div style="width: 100%; float: left;">
         <div class="header-box">
             <div class="header-title">
@@ -28,14 +29,17 @@
     </div>
 
     <div class="menu-header">
-        <div class="option-style link">Home</div>
-        <div class="home-option option-style link">Quem somos</div>
-        <div class="home-option option-style link">Portifólio</div>
-        <div class="home-option option-style link">Contato</div>
+        <div id="home_link" class="option-style link" onclick="tabControl('flex', 'none', 'none', 'none');">Home</div>
+        <div id="who_are_link" class="home-option option-style link" onclick="tabControl('none', 'flex', 'none', 'none');">Quem somos</div>
+        <div id="portifolio_link" class="home-option option-style link" onclick="tabControl('none', 'none', 'flex', 'none');">Portifólio</div>
+        <div id="contact_link" class="home-option option-style link" onclick="tabControl('none', 'none', 'none', 'flex');">Contato</div>
     </div>
 
-    <div class="home-content">
-        Site em construção<br/>Em breve novidades!
+    <div class="body-content">
+        <div id="home_content" class="home-content same">Conteúdo do elemento UM</div>
+        <div id="who_are_content" class="who-are-content same">Conteúdo do elemento DOIS</div>
+        <div id="portifolio_content" class="portfolio-content same">Conteúdo do elemento TRÊS</div>
+        <div id="contact_content" class="contact-content same">Conteúdo do elemento QUATRO</div>
     </div>
 </body>
 
