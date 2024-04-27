@@ -110,11 +110,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 10vh;
     font-style: italic;
     font-size: large;
     font-family: 'Courier New', Courier, monospace;
-    margin-bottom: 3em;
 }
 
 .same{
