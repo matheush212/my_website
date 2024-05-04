@@ -12,8 +12,10 @@ $(function(){
     $(window).scroll(function(){
         if( $(window).scrollTop() > stickyHeaderTop ) {
             $('#menu_header').css({position: 'fixed', top: '0px'});
+            $('#back_to_init').css({display: 'initial'});
         } else {
             $('#menu_header').css({position: 'static', top: '0px'});
+            $('#back_to_init').css({display: 'none'});
         }
     });
 });

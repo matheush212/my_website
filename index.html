@@ -13,36 +13,44 @@
     <link href='css/style.css' rel='stylesheet' type='text/css'>
     <link href='css/about-me.css' rel='stylesheet' type='text/css'>
     <link href='css/contact.css' rel='stylesheet' type='text/css'>
+    <link href='css/footer.css' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
-<body onload="tabControl('flex', 'none', 'none', 'none');">
-    <div style="width: 100%; float: left;">
-        <div class="header-box">
-            <div class="header-title">
-                <div>MH Softwares</div>
-            </div>
-            <div class="header-subtitle">
-                <div>soluções WEB!</div>
-            </div>
-        </div>
+<body onload="tabControl('initial', 'none', 'none', 'none');">
+    <div id="init_banner" style="width: 100%; height: 100vh; float: left;">
+        <div class="image-div">
+            <div class="brand-name logo">
+                <div class="logo-box">
+                    <img src="images/MHSoftLogo.png" class="mh-logo">
+                </div>
 
-        <div class="logo-box">
-            <img src="images/MHSoftLogo.png" class="mh-logo">
+                <div class="text-style">
+                    <div>MH</div>
+                    <div>&nbsp&nbsp&nbspSoftwares</div>
+                </div>
+            </div>
+
+            <a href="#body_content" id="next-section"></a>
         </div>
     </div>
 
     <div id="menu_header" class="menu-header">
-        <div id="home_link" class="option-style link" onclick="tabControl('flex', 'none', 'none', 'none');">Home</div>
-        <div id="who_are_link" class="home-option option-style link" onclick="tabControl('none', 'flex', 'none', 'none');">Sobre Mim</div>
-        <div id="portifolio_link" class="home-option option-style link" onclick="tabControl('none', 'none', 'flex', 'none');">Portifólio</div>
-        <div id="contact_link" class="home-option option-style link" onclick="tabControl('none', 'none', 'none', 'flex');">Contato</div>
+        <div id="home_link" class="option-style link" onclick="tabControl('initial', 'none', 'none', 'none');">Home</div>
+        <div id="who_are_link" class="home-option option-style link"
+            onclick="tabControl('none', 'initial', 'none', 'none');">Sobre Mim</div>
+        <div id="portifolio_link" class="home-option option-style link"
+            onclick="tabControl('none', 'none', 'initial', 'none');">Portifólio</div>
+        <div id="contact_link" class="home-option option-style link"
+            onclick="tabControl('none', 'none', 'none', 'initial');">Contato</div>
     </div>
 
-    <div class="body-content">
-        <div id="home_content" class="home-content same" style="padding-top: 10vh;">Site em Desenvolvimento! Aguarde...</div>
+    <div id="body_content" class="body-content">
+        <div id="home_content" class="home-content same" style="padding-top: 10vh;">
+            Site em Desenvolvimento! Aguarde...
+        </div>
 
-        
+
         <div id="who_are_content" class="who-are-content same">
             <div class="wrapper">
                 <div class="testimonial">
@@ -50,11 +58,20 @@
                         <h1>Sobre Mim</h1>
                         <img src="images/eu.jpeg">
                         <blockquote>
-                            "Olá, sou o Matheus, um desenvolvedor que adora codar e ver as coisas acontecerem, sou formado em Engenharia de Software e tenho mais de 7 anos de experiência na área de desenvolvimento, atuando com aplicações WEB e sistemas em .NET, desenvolvendo aplicações em C# e .NET Framework e sistemas WEB utilizando Node.js e React JS. 
-                            Na área de automação tenho um pouco de experiência com programação de PLC e IHM, trabalhando com equipamentos das empresas Allen-Bradley e Schneider Electric.
-                            Para enriquecer ainda mais meu conhecimento na área de desenvolvimento Web, sou pós graduado em desenvolvimento fullstack e hoje desenvolvo apliações Web como freelancer, porém também trabalho de forma remota (Home Office) com desenvolvimento na linguagem Ruby.
-                            Gosto de jogar videogame (amo a série Far Cry) e viajar por esse mundão a fora, conhecendo novas culturas, lugares e culinárias...
-                            Sou uma pessoa em busca de desafios, proativo, aprendo rápido, e tenho bom desempenho com trabalho em equipe. Estou sempre em busca de conhecimento, melhorando e evoluindo cada vez mais como profissional."
+                            "Olá, sou o Matheus, um desenvolvedor que adora codar e ver as coisas acontecerem, sou
+                            formado em Engenharia de Software e tenho mais de 7 anos de experiência na área de
+                            desenvolvimento, atuando com aplicações WEB e sistemas em .NET, desenvolvendo aplicações em
+                            C# e .NET Framework e sistemas WEB utilizando Node.js e React JS.
+                            Na área de automação tenho um pouco de experiência com programação de PLC e IHM, trabalhando
+                            com equipamentos das empresas Allen-Bradley e Schneider Electric.
+                            Para enriquecer ainda mais meu conhecimento na área de desenvolvimento Web, sou pós graduado
+                            em desenvolvimento fullstack e hoje desenvolvo apliações Web como freelancer, porém também
+                            trabalho de forma remota (Home Office) com desenvolvimento na linguagem Ruby.
+                            Gosto de jogar videogame (amo a série Far Cry) e viajar por esse mundão a fora, conhecendo
+                            novas culturas, lugares e culinárias...
+                            Sou uma pessoa em busca de desafios, proativo, aprendo rápido, e tenho bom desempenho com
+                            trabalho em equipe. Estou sempre em busca de conhecimento, melhorando e evoluindo cada vez
+                            mais como profissional."
                         </blockquote>
                         <h5>Matheus Horongoso</h5>
                         <p>"Não é a linguagem de programação que define o programador, mas sim sua lógica."</p>
@@ -65,35 +82,75 @@
         </div>
 
 
-        <div id="portifolio_content" class="portfolio-content same" style="padding-top: 10vh;">Site em Desenvolvimento! Aguarde...</div>
+        <div id="portifolio_content" class="portfolio-content same" style="padding-top: 10vh;">
+            Site em Desenvolvimento!Aguarde...
+        </div>
 
 
         <div id="contact_content" class="contact-content same">
-            <div style="width: 100%; float: left;">
-                <div><i class="material-icons icons">call</i>
-                <label class="contact-info" style="font-weight: bold;">Telefone/Whatsapp:</label>
-                <label class="contact-info">(47) 9 9901-0161</label>
-            </div>
-            <div style="width: 100%; float: left; margin-top: 1em;">
-                <div><i class="material-icons icons">mail</i>
-                <label class="contact-info" style="font-weight: bold;">E-mail:</label>
-                <label class="contact-info">matheushhorongoso@gmail.com</label>
-            </div>
-            <div style="width: 100%; float: left; margin-top: 1em;">
-                <div><i class="material-icons icons">public</i>
-                <label class="contact-info" style="font-weight: bold;">Linked-in:</label>
-                <label class="contact-info">https://www.linkedin.com/in/matheus-horongoso-8600aa138/</label>
-            </div>
-            <div style="width: 100%; float: left; margin-top: 1em;">
-                <div><i class="material-icons icons">location_on</i>
-                <label class="contact-info" style="font-weight: bold;">Cidade/Estado:</label>
-                <label class="contact-info">Jaraguá do Sul - SC</label>
-            </div>
-            <div style="width: 100%; float: left; margin-top: 2em;">
-                <div><i class="material-icons icons">work</i>
-                <label class="contact-info" style="font-weight: bold;">Desenvolvedor Freelancer</label>
+            <div class="contact-form">
+                <h2>Entre em contato</h2>
+                <form action="#" method="post" enctype="multipart/form-data">
+                    <label>
+                        <span><i class="material-icons icons">person</i> Nome</span>
+                        <input type="text" name="nome" required="">
+                    </label>
+                    <label>
+                        <span><i class="material-icons icons">call</i> Telefone</span>
+                        <input type="text" name="telefone" required="">
+                    </label>
+                    <label>
+                        <span><i class="material-icons icons">mail</i> E-mail</span>
+                        <input type="text" name="email" class="fade_8S">
+                    </label>
+                    <label>
+                        <span><i class="material-icons icons">subject</i> Assunto</span>
+                        <input type="text" name="assunto" required="">
+                    </label>
+
+                    <label>
+                        <span><i class="material-icons icons">comment</i> Mensagem</span>
+                        <textarea name="mensagem" rows="3" required=""></textarea>
+                    </label>
+
+                    <input type="hidden" name="acao" value="enviar" />
+                    <button class="btn-send" title="Enviar"><b>Enviar</b></button>
+                </form>
             </div>
         </div>
+
+        <a href="#init_banner" id="back_to_init"><img src="images/arrow-top.png" width="50px" height="50px"></a>
+    </div>
+
+    <div class="footer">
+        <div class="footer-contact">
+            <div style="width: 100%; float: left;">
+                <label class="contact-info" style="font-weight: bold;">Telefone/Whatsapp</label>
+            </div>
+            <div style="width: 100%; float: left;">
+                <label class="contact-info">(47) 9 9901-0161</label>
+            </div>
+        </div>
+
+        <div class="footer-contact">
+            <div style="width: 100%; float: left;">
+                <label class="contact-info" style="font-weight: bold;">Cidade/Estado</label>
+            </div>
+            <div style="width: 100%; float: left;">
+                <label class="contact-info">Jaraguá do Sul - SC</label>
+            </div>
+        </div>
+
+        <div class="footer-contact">
+            <div style="width: 100%; float: left;">
+                <label class="contact-info" style="font-weight: bold;">Desenvolvedor Freelancer</label>
+            </div>
+
+            <div style="width: 100%; float: left;">
+                <label class="contact-info">Softwares WEB</label>
+            </div>
+        </div>
+    </div>
     </div>
 </body>
 
