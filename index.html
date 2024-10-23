@@ -10,10 +10,12 @@
     <link rel="shortcut icon" href="/favicon.ico">
     <script src="static/js/jquery-3.7.1.min.js"></script>
     <script type="text/javascript" src="static/js/script.js"></script>
+    <script defer src="static/js/send-email.js"></script>
     <link href='static/css/style.css' rel='stylesheet' type='text/css'>
     <link href='static/css/about-me.css' rel='stylesheet' type='text/css'>
     <link href='static/css/contact.css' rel='stylesheet' type='text/css'>
     <link href='static/css/footer.css' rel='stylesheet' type='text/css'>
+    <link href='static/css/cards.css' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
@@ -22,7 +24,7 @@
         <div class="image-div">
             <div class="brand-name logo">
                 <div class="logo-box">
-                    <img src="static/images/MHSoftLogo.png" class="mh-logo">
+                    <img src="static/images/logo.png" class="mh-logo">
                 </div>
 
                 <div class="text-style">
@@ -36,9 +38,10 @@
     </div>
 
     <div id="menu_header" class="menu-header">
-        <div id="home_link" class="option-style link" onclick="tabControl('initial', 'none', 'none', 'none');">Home</div>
+        <div id="home_link" class="option-style link" onclick="tabControl('initial', 'none', 'none', 'none');">Home
+        </div>
         <div id="who_are_link" class="home-option option-style link"
-            onclick="tabControl('none', 'initial', 'none', 'none');">Sobre Mim</div>
+            onclick="tabControl('none', 'initial', 'none', 'none');">Sobre Nós</div>
         <div id="portifolio_link" class="home-option option-style link"
             onclick="tabControl('none', 'none', 'initial', 'none');">Portifólio</div>
         <div id="contact_link" class="home-option option-style link"
@@ -55,66 +58,123 @@
             <div class="wrapper">
                 <div class="testimonial">
                     <article>
-                        <h1>Sobre Mim</h1>
-                        <img src="static/images/eu.jpeg">
+                        <h1>Sobre Nós</h1>
                         <blockquote>
-                            "Olá, sou o Matheus, um desenvolvedor que adora codar e ver as coisas acontecerem, sou
-                            formado em Engenharia de Software e tenho mais de 7 anos de experiência na área de
-                            desenvolvimento, atuando com aplicações WEB e sistemas em .NET, desenvolvendo aplicações em
-                            C# e .NET Framework e sistemas WEB utilizando Node.js e React JS.
-                            Na área de automação tenho um pouco de experiência com programação de PLC e IHM, trabalhando
-                            com equipamentos das empresas Allen-Bradley e Schneider Electric.
+                            "Olá, me chamo Matheus Horongoso, sou um desenvolvedor formado em Engenharia de Software com
+                            mais de 7 anos de experiência na área de
+                            desenvolvimento, atuando com aplicações WEB, desenvolvendo aplicações em Node.js e React JS.
                             Para enriquecer ainda mais meu conhecimento na área de desenvolvimento Web, sou pós graduado
-                            em desenvolvimento fullstack e hoje desenvolvo apliações Web como freelancer, porém também
-                            trabalho de forma remota (Home Office) com desenvolvimento na linguagem Ruby.
-                            Gosto de jogar videogame (amo a série Far Cry) e viajar por esse mundão a fora, conhecendo
-                            novas culturas, lugares e culinárias...
-                            Sou uma pessoa em busca de desafios, proativo, aprendo rápido, e tenho bom desempenho com
-                            trabalho em equipe. Estou sempre em busca de conhecimento, melhorando e evoluindo cada vez
-                            mais como profissional."
+                            em desenvolvimento fullstack e hoje desenvolvo apliações Web como freelancer."
+                        </blockquote>
+                        <blockquote>
+                            "A MH Softwares nasceu com o objetivo de criar soluções WEB personalizadas, que se encaixem
+                            perfeitamente ao seu negócio.
+                            Os sistemas são criados com base no que o cliente precisa, realizando conversas e um
+                            orçamento detalhado com tudo que o sistema
+                            deve realmente fazer, especificamente para seu objetivo. Sendo assim, cada sistema é
+                            construído do zero, para que seja exclusivamente
+                            para seu uso e que atenda de forma personalizada o seu negócio. E claro, temos também
+                            sistemas já constuídos, que podem atender perfeitamente
+                            o que você precisa, sem necessidade de ajustes ou que precisem de pequenos ajustes. Sendo
+                            assim, a MH Softwares está aqui para lhe proporcionar
+                            algo novo, que se encaixe perfeitamente no que você precisa, sem necessidade de alterações
+                            no seu negócio!"
+                        </blockquote>
+                        <blockquote>
+                            "Para saber mais, entre em contato e agende uma conversa online para entendermos do que você
+                            precisa, e não deixe de visualizar a aba de 'Portifólio'
+                            para verificar as soluções já existentes e ter uma ideia de molde para o seu projeto!
+                            Lembrando que os sitemas já existentes também podem
+                            ser adquiridos, caso estes atenderem o seu objetivo, caso contrário, agende uma conversa e
+                            solicite um orçamento, é gratuito! :)"
                         </blockquote>
                         <h5>Matheus Horongoso</h5>
                         <p>"Não é a linguagem de programação que define o programador, mas sim sua lógica."</p>
-                        <p>-David Ribeiro Guilherme</p>
                     </article>
                 </div>
             </div>
         </div>
 
 
-        <div id="portifolio_content" class="portfolio-content same" style="padding-top: 10vh;">
-            Site em Desenvolvimento!Aguarde...
+        <div id="portifolio_content" class="portfolio-content same">
+            <div class="card">
+                <img src="./static/images/kanfra.png" alt="Avatar" style="width:255px">
+                <div class="container">
+                    <h4><b>Kanfra</b></h4>
+                    <p>Sistema de Gerenciamento e Organização em quadros!</p>
+                    <button style="margin-bottom: 10px;">Saiba Mais...</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./static/images/AgroPet.png" alt="Avatar" style="width:255px">
+                <div class="container">
+                    <h4><b>AgroPET</b></h4>
+                    <p>Sistema completo de controle de estoque para AgroPets!</p>
+                    <button style="margin-bottom: 10px;">Saiba Mais...</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./static/images/ps_ticket.png" alt="Avatar" style="width:255px">
+                <div class="container">
+                    <h4><b>PS-Tickets</b></h4>
+                    <p>Sistema de controle para impressão de tickets em eventos!</p>
+                    <button style="margin-bottom: 10px;">Saiba Mais...</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./static/images/inducon.png" alt="Avatar" style="width:255px">
+                <div class="container">
+                    <h4><b>INDUCON.CNC</b></h4>
+                    <p>Software para controle de usinagem com tornos e frezas CNC!</p>
+                    <button style="margin-bottom: 10px;">Saiba Mais...</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./static/images/petshop.png" alt="Avatar" style="width:255px">
+                <div class="container">
+                    <h4><b>PET Shop</b></h4>
+                    <p>Sistema ideal para serviços apenas de PET Shop!</p>
+                    <button style="margin-bottom: 10px;">Saiba Mais...</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./static/images/cipa.png" alt="Avatar" style="width:255px">
+                <div class="container">
+                    <h4><b>CIPA</b></h4>
+                    <p>Sistema de controle completo de CIPA para as empresas!</p>
+                    <button style="margin-bottom: 10px;">Saiba Mais...</button>
+                </div>
+            </div>
         </div>
 
 
         <div id="contact_content" class="contact-content same">
             <div class="contact-form">
-                <h2>Entre em contato</h2>
-                <form action="#" method="post" enctype="multipart/form-data">
+                <form action="https://formspree.io/f/mrbgbyvb" method="POST" data-form>
+                    <h2>Entre em contato pelo whatsapp "+55 (47) 3511-6595" ou pelo e-mail preenchendo o formulário abaixo:</h2>
                     <label>
                         <span><i class="material-icons icons">person</i> Nome</span>
-                        <input type="text" name="nome" required="">
+                        <input type="text" name="nome" id="nome" required>
                     </label>
                     <label>
                         <span><i class="material-icons icons">call</i> Telefone</span>
-                        <input type="text" name="telefone" required="">
+                        <input type="text" name="telefone" id="telefone" required=>
                     </label>
                     <label>
                         <span><i class="material-icons icons">mail</i> E-mail</span>
-                        <input type="text" name="email" class="fade_8S">
+                        <input type="email" name="email" id="email" required>
                     </label>
                     <label>
                         <span><i class="material-icons icons">subject</i> Assunto</span>
-                        <input type="text" name="assunto" required="">
+                        <input type="text" name="assunto" id="assunto" required=>
                     </label>
 
                     <label>
                         <span><i class="material-icons icons">comment</i> Mensagem</span>
-                        <textarea name="mensagem" rows="3" required=""></textarea>
+                        <textarea name="mensagem" id="mensagem" style="outline: none; resize: none;" rows="10" required=></textarea>
                     </label>
 
-                    <input type="hidden" name="acao" value="enviar" />
-                    <button class="btn-send" title="Enviar"><b>Enviar</b></button>
+                    <button type="submit" class="btn-send" title="Enviar" data-button><b>Enviar</b></button>
                 </form>
             </div>
         </div>
@@ -125,10 +185,10 @@
     <div class="footer">
         <div class="footer-contact">
             <div style="width: 100%; float: left;">
-                <label class="contact-info" style="font-weight: bold;">Telefone/Whatsapp</label>
+                <label class="contact-info" style="font-weight: bold;">Whatsapp</label>
             </div>
             <div style="width: 100%; float: left;">
-                <label class="contact-info">(47) 9 9901-0161</label>
+                <label class="contact-info">+55 (47) 3511-6595</label>
             </div>
         </div>
 
@@ -148,6 +208,16 @@
 
             <div style="width: 100%; float: left;">
                 <label class="contact-info">Softwares WEB</label>
+            </div>
+        </div>
+
+        <div class="footer-contact">
+            <div style="width: 100%; float: left;">
+                <label class="contact-info" style="font-weight: bold;">E-mail</label>
+            </div>
+
+            <div style="width: 100%; float: left;">
+                <label class="contact-info">mhsoftwares.suport@gmail.com</label>
             </div>
         </div>
     </div>

@@ -18,8 +18,9 @@
     padding: 1em;
     margin-bottom: 1em;
     border-radius: 6px;
-    background: #dddddd;
+    background: #cacaca;
     box-shadow: 1px 0px 1.2px 0px #ccc;
+    font-size: 80% !important;
 }
 
 .contact-form:before {
@@ -46,7 +47,7 @@
 .contact-form label span {
     width: 100%;
     float: left;
-    color: #6b6b6b;
+    color: #424242;
     margin-bottom: 6px;
     font-family: 'open_sansregular';
 }
@@ -109,7 +110,7 @@
     cursor: pointer;
     border-radius: 4px;
     border: 0;
-    padding: 0.8em 0em;
+    padding: 0.5em 0em;
     color: #fff;
     font-size: 1.3em;
     font-family: 'open_sansbold';
