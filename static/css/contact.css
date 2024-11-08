@@ -19,8 +19,11 @@
     margin-bottom: 1em;
     border-radius: 6px;
     background: #cacaca;
-    box-shadow: 1px 0px 1.2px 0px #ccc;
+    box-shadow: 0 15px 33px 0 rgba(0, 0, 0, 0.404);
     font-size: 80% !important;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(177, 177, 177);
 }
 
 .contact-form:before {

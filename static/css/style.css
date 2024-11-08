@@ -97,7 +97,7 @@ body {
     height: 50px;
     position: absolute;
     bottom: 10px;
-    left: 50%;
+    left: 48%;
     transform: translateY(-50%);
     background-position: center;
     background-image: url('../images/arrow-section.svg');

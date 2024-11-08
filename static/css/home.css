@@ -1,0 +1,32 @@
+.wrapper-home{
+    min-height: 100vh;
+    width: 100%;
+    text-align: center;
+}
+
+h1, .wrap { text-align: center }
+.wrap {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+.wrap div {
+    width: 8em;
+}
+.wrap div div {
+    height: 8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wrap div div svg {
+    top:0;
+    left:0;
+    width: 100%;
+    height: auto;
+}
+.wrap div div p {
+    font-size: 2em;
+    font-weight: bold
+}
