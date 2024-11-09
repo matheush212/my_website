@@ -10,6 +10,8 @@
     <link rel="shortcut icon" href="/favicon.ico">
     <script src="static/js/jquery-3.7.1.min.js"></script>
     <script type="text/javascript" src="static/js/script.js"></script>
+    <script type="text/javascript" src="static/js/modal.js"></script>
+    <script type="text/javascript" src="static/js/slide-show.js"></script>
     <script defer src="static/js/send-email.js"></script>
     <link href='static/css/style.css' rel='stylesheet' type='text/css'>
     <link href='static/css/home.css' rel='stylesheet' type='text/css'>
@@ -17,11 +19,35 @@
     <link href='static/css/contact.css' rel='stylesheet' type='text/css'>
     <link href='static/css/footer.css' rel='stylesheet' type='text/css'>
     <link href='static/css/cards.css' rel='stylesheet' type='text/css'>
+    <link href='static/css/modal.css' rel='stylesheet' type='text/css'>
+    <link href='static/css/slide-show.css' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body onload="tabControl('initial', 'none', 'none', 'none');">
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close" onclick="closeModal();">&times;</span>
+            <br />
+            <br />
+            <div class="slideshow-container">
+                <div id="slide-images"></div>
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+            </div>
+            <br>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </div>
+
     <div id="init_banner" style="width: 100%; height: 100vh; float: left;">
         <div class="image-div">
             <div class="brand-name logo">
@@ -58,8 +84,8 @@
                         <h5>Seu sistema completo e personalizado está aqui!</h5>
                         <h2>Realize um orçamento!</h2>
                         <p>"Sistemas 100% online, seguros e criados especialmente para o seu negócio."</p>
-                        <br/>
-                        <br/>
+                        <br />
+                        <br />
                         <p>Escolhendo a gente você terá uma experiência incrível, com software de qualidade,</p>
                         <p>pois trbalhamos de forma justa e honesta, com base nos nossos valores,</p>
                         <p>conheça um pouco mais deles abaixo! :)</p>
@@ -69,8 +95,10 @@
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="200px" height="200px"
                                     viewBox="0 0 200 200" fill="#000000">
-                                    <circle cx="100" cy="100" r="90" fill="#70b9868a" stroke="#99aaff" stroke-width="5" />
-                                    <text x="50%" y="50%" font-size="x-large" text-anchor="middle" stroke="#000000" stroke-width="1px" dy=".3em">Desempenho</text>
+                                    <circle cx="100" cy="100" r="90" fill="#70b9868a" stroke="#99aaff"
+                                        stroke-width="5" />
+                                    <text x="50%" y="50%" font-size="x-large" text-anchor="middle" stroke="#000000"
+                                        stroke-width="1px" dy=".3em">Desempenho</text>
                                 </svg>
                             </div>
                             <p>Sistemas com desempenho, agilidade e funcionalidades que você precisa!</p>
@@ -79,18 +107,23 @@
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="200px" height="200px"
                                     viewBox="0 0 200 200" fill="#000000">
-                                    <circle cx="100" cy="100" r="90" fill="#b9b5708a" stroke="#99aaff" stroke-width="5" />
-                                    <text x="50%" y="50%" font-size="x-large" text-anchor="middle" stroke="#000000" stroke-width="1px" dy=".3em">Qualidade</text>
+                                    <circle cx="100" cy="100" r="90" fill="#b9b5708a" stroke="#99aaff"
+                                        stroke-width="5" />
+                                    <text x="50%" y="50%" font-size="x-large" text-anchor="middle" stroke="#000000"
+                                        stroke-width="1px" dy=".3em">Qualidade</text>
                                 </svg>
                             </div>
-                            <p>Sistemas com qualidade, desempenhando funções realmente importantes para o seu negócio.</p>
+                            <p>Sistemas com qualidade, desempenhando funções realmente importantes para o seu negócio.
+                            </p>
                         </div>
                         <div>
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="200px" height="200px"
                                     viewBox="0 0 200 200" fill="#000000">
-                                    <circle cx="100" cy="100" r="90" fill="#b970708a" stroke="#99aaff" stroke-width="5" />
-                                    <text x="50%" y="50%" font-size="x-large" text-anchor="middle" stroke="#000000" stroke-width="1px" dy=".3em">Segurança</text>
+                                    <circle cx="100" cy="100" r="90" fill="#b970708a" stroke="#99aaff"
+                                        stroke-width="5" />
+                                    <text x="50%" y="50%" font-size="x-large" text-anchor="middle" stroke="#000000"
+                                        stroke-width="1px" dy=".3em">Segurança</text>
                                 </svg>
                             </div>
                             <p>Segurança sempre em primeiro lugar! Estrura e mecanismos seguros para navegação.</p>
@@ -101,8 +134,10 @@
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="200px" height="200px"
                                     viewBox="0 0 200 200" fill="#000000">
-                                    <circle cx="100" cy="100" r="90" fill="#7096b98a" stroke="#99aaff" stroke-width="5" />
-                                    <text x="50%" y="50%" font-size="x-large" text-anchor="middle" stroke="#000000" stroke-width="1px" dy=".3em">Garantia</text>
+                                    <circle cx="100" cy="100" r="90" fill="#7096b98a" stroke="#99aaff"
+                                        stroke-width="5" />
+                                    <text x="50%" y="50%" font-size="x-large" text-anchor="middle" stroke="#000000"
+                                        stroke-width="1px" dy=".3em">Garantia</text>
                                 </svg>
                             </div>
                             <p>Aqui você tem garantia! Suporte e manutenção para o que você precisar.</p>
@@ -111,21 +146,27 @@
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="200px" height="200px"
                                     viewBox="0 0 200 200" fill="#000000">
-                                    <circle cx="100" cy="100" r="90" fill="#b070b98a" stroke="#99aaff" stroke-width="5" />
-                                    <text x="50%" y="50%" font-size="x-large" text-anchor="middle" stroke="#000000" stroke-width="1px" dy=".3em">Preço Justo</text>
+                                    <circle cx="100" cy="100" r="90" fill="#b070b98a" stroke="#99aaff"
+                                        stroke-width="5" />
+                                    <text x="50%" y="50%" font-size="x-large" text-anchor="middle" stroke="#000000"
+                                        stroke-width="1px" dy=".3em">Preço Justo</text>
                                 </svg>
                             </div>
-                            <p>Aqui você encontra preços justos, por sistemas personalizados e exlusivos para seu negócio!</p>
+                            <p>Aqui você encontra preços justos, por sistemas personalizados e exlusivos para seu
+                                negócio!</p>
                         </div>
                         <div>
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="200px" height="200px"
                                     viewBox="0 0 200 200" fill="#000000">
-                                    <circle cx="100" cy="100" r="90" fill="#b970948a" stroke="#99aaff" stroke-width="5" />
-                                    <text x="50%" y="50%" font-size="x-large" text-anchor="middle" stroke="#000000" stroke-width="1px" dy=".3em">Respeito</text>
+                                    <circle cx="100" cy="100" r="90" fill="#b970948a" stroke="#99aaff"
+                                        stroke-width="5" />
+                                    <text x="50%" y="50%" font-size="x-large" text-anchor="middle" stroke="#000000"
+                                        stroke-width="1px" dy=".3em">Respeito</text>
                                 </svg>
                             </div>
-                            <p>Aqui, acima de tudo, a gente preza por respeito, acreditamos que o respeito move o mundo!</p>
+                            <p>Aqui, acima de tudo, a gente preza por respeito, acreditamos que o respeito move o mundo!
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -181,7 +222,7 @@
                 <div class="container">
                     <h4><b>Kanfra</b></h4>
                     <p>Sistema de Gerenciamento e Organização em quadros!</p>
-                    <button class="btn-card" style="margin-bottom: 10px;">Saiba Mais...</button>
+                    <button class="btn-card" style="margin-bottom: 10px;" onclick="openModal(1);">Saiba Mais...</button>
                 </div>
             </div>
             <div class="card">
@@ -189,7 +230,7 @@
                 <div class="container">
                     <h4><b>AgroPET</b></h4>
                     <p>Sistema completo de controle de estoque para AgroPets!</p>
-                    <button class="btn-card" style="margin-bottom: 10px;">Saiba Mais...</button>
+                    <button class="btn-card" style="margin-bottom: 10px;" onclick="openModal(2);">Saiba Mais...</button>
                 </div>
             </div>
             <div class="card">
@@ -197,16 +238,16 @@
                 <div class="container">
                     <h4><b>PS-Tickets</b></h4>
                     <p>Sistema de controle para impressão de tickets em eventos!</p>
-                    <button class="btn-card" style="margin-bottom: 10px;">Saiba Mais...</button>
+                    <button class="btn-card" style="margin-bottom: 10px;" onclick="openModal(3);">Saiba Mais...</button>
                 </div>
             </div>
-            <br/>
+            <br />
             <div class="card">
                 <img src="./static/images/inducon.png" alt="Avatar" style="width:255px">
                 <div class="container">
                     <h4><b>INDUCON.CNC</b></h4>
                     <p>Software para controle de usinagem com tornos e frezas CNC!</p>
-                    <button class="btn-card" style="margin-bottom: 10px;">Saiba Mais...</button>
+                    <button class="btn-card" style="margin-bottom: 10px;" onclick="openModal(4);">Saiba Mais...</button>
                 </div>
             </div>
             <div class="card">
@@ -214,7 +255,7 @@
                 <div class="container">
                     <h4><b>PET Shop</b></h4>
                     <p>Sistema ideal para serviços apenas de PET Shop!</p>
-                    <button class="btn-card" style="margin-bottom: 10px;">Saiba Mais...</button>
+                    <button class="btn-card" style="margin-bottom: 10px;" onclick="openModal(5);">Saiba Mais...</button>
                 </div>
             </div>
             <div class="card">
@@ -222,7 +263,7 @@
                 <div class="container">
                     <h4><b>CIPA</b></h4>
                     <p>Sistema de controle completo de CIPA para as empresas!</p>
-                    <button class="btn-card" style="margin-bottom: 10px;">Saiba Mais...</button>
+                    <button class="btn-card" style="margin-bottom: 10px;" onclick="openModal(6);">Saiba Mais...</button>
                 </div>
             </div>
         </div>
@@ -233,7 +274,8 @@
                 <form action="https://formspree.io/f/mrbgbyvb" method="POST" data-form>
                     <h2>Entre em contato pelo whatsapp:</h2>
                     <div style="width: 100%;float: left; margin-bottom: 22px;">
-                        <i class="fa fa-whatsapp" style="border-radius: 50%; float:left;font-size:35px;color:rgb(44, 170, 50);margin-top: 10px;"></i>
+                        <i class="fa fa-whatsapp"
+                            style="border-radius: 50%; float:left;font-size:35px;color:rgb(44, 170, 50);margin-top: 10px;"></i>
                         <h2 style="float: left; margin-left: 10px;">+55 (47) 3511-6595</h2>
                     </div>
                     <h2>ou pelo e-mail preenchendo o formulário abaixo:</h2>
@@ -306,7 +348,6 @@
                 <label class="contact-info">mhsoftwares.suport@gmail.com</label>
             </div>
         </div>
-    </div>
     </div>
 </body>
 
